@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube Release Automation
 
-## Getting Started
+Una aplicación web moderna y visualmente atractiva para automatizar completamente el proceso de publicación de vídeos de YouTube en múltiples plataformas.
 
-First, run the development server:
+## 🚀 Características
+
+- **Wizard intuitivo de 4 pasos** para guiar el proceso completo
+- **Generación automática** de contenido optimizado para cada plataforma
+- **Generación de thumbnails con IA** usando Gemini (4 opciones para elegir)
+- **Programación automática** en múltiples redes sociales (LinkedIn, Facebook, Instagram, X/Twitter)
+- **Newsletter automatizada** con Listmonk
+- **Interfaz minimalista y llamativa** con animaciones fluidas
+
+## 📋 Proceso de Publicación
+
+1. **Paso 1: Información del Vídeo**
+   - Transcripción del vídeo
+   - Fecha de publicación
+   - Link de YouTube
+   - Ruta del vídeo para X (Twitter)
+
+2. **Paso 2: Generación de Materiales**
+   - Creación de carpeta organizada
+   - Generación de YouTube.md (títulos, descripción, capítulos)
+   - Generación de Redes.md (contenido para redes sociales)
+   - Generación de Newsletter.md
+   - Creación de 4 thumbnails con IA
+
+3. **Paso 3: Selección de Thumbnail**
+   - Vista previa de las 4 opciones generadas
+   - Selección de la thumbnail favorita
+
+4. **Paso 4: Programación**
+   - Programación automática en todas las plataformas
+   - Fecha: La especificada a las 17:15h (hora de España)
+
+## 🛠️ Tecnologías
+
+- **Next.js 15** con App Router
+- **React 19** con TypeScript
+- **Tailwind CSS v4** para estilos
+- **Framer Motion** para animaciones
+- **Lucide React** para iconos
+- **MCPs**: Postiz, Listmonk, Gemini Image
+
+## 🚀 Instalación
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+youtube-release-app/
+├── app/
+│   ├── api/
+│   │   ├── generate/    # API para generar contenido
+│   │   └── schedule/    # API para programar publicaciones
+│   ├── globals.css      # Estilos globales y tema
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Button.tsx
+│   ├── Card.tsx
+│   ├── StepIndicator.tsx
+│   ├── Step1InputForm.tsx
+│   ├── Step2GenerateContent.tsx
+│   ├── Step3ReviewThumbnails.tsx
+│   ├── Step4Schedule.tsx
+│   └── Wizard.tsx
+└── lib/
+    └── generator.ts     # Utilidades de generación
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Paleta de Colores
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Background**: `#0f0f23` (Azul oscuro profundo)
+- **Primary**: `#6366f1` (Índigo vibrante)
+- **Secondary**: `#8b5cf6` (Púrpura)
+- **Accent**: `#ffd966` (Amarillo)
+- **Card Background**: `#1a1a2e`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuración
 
-## Deploy on Vercel
+Para que la aplicación funcione correctamente, asegúrate de tener configurados los MCPs:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Postiz MCP**: Para programación en redes sociales
+- **Listmonk MCP**: Para newsletter
+- **Gemini Image MCP**: Para generación de thumbnails
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Próximos Pasos
+
+- [ ] Implementar integración real con MCPs
+- [ ] Añadir generación de contenido con IA
+- [ ] Implementar análisis de transcripción para capítulos automáticos
+- [ ] Añadir preview de contenido generado
+- [ ] Implementar sistema de plantillas personalizables
